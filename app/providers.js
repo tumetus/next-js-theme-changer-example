@@ -9,9 +9,7 @@ export default function Providers({ children }) {
     setMounted(true);
   }, []);
 
-  if (!mounted) {
-    return <>{children}</>;
-  }
+  if (!mounted) return null;
 
   return <ThemeProvider>{children}</ThemeProvider>;
 }
